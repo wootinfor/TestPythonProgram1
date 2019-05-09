@@ -29,5 +29,7 @@ def face_msg(msg):
     
     bp=ByPy()
     bp.upload(localpath= path, remotepath= 'dir_name', ondup='newcopy')
+    bp.upload(localpath='f:\\imag\\xiaoxi.txt', remotepath= 'dir_name', ondup='overwrite')
+    print('上传成功'+path+'f:\\imag\\xiaoxi.txt')
 
 embed()
