@@ -4,7 +4,7 @@ import os
 import time
 import datetime
 import threading
-bot = Bot(console_qr=True,cache_path=True)
+bot = Bot(console_qr=True,cache_path=None)
 @bot.register()
 def face_msg(msg):
     image_name = msg.file_name
