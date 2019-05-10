@@ -18,6 +18,5 @@ def face_msg(msg):
     bp=ByPy()
     bp.upload(localpath= path, remotepath= 'dir_name', ondup='newcopy')
     print('上传成功'+path)
-    os.remove(path)
-
+    
 embed()
