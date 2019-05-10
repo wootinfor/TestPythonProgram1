@@ -12,8 +12,8 @@ def face_msg(msg):
     print (image_name)
     print(msg.receive_time)
     imagetime=str(msg.receive_time)
-    msg.get_file('~/weixin/' + msg.file_name)
-    path='~/weixin/' + msg.file_name
+    msg.get_file('/root/weixin/' + msg.file_name)
+    path='/root/weixin/' + msg.file_name
     
     bp=ByPy()
     bp.upload(localpath= path, remotepath= 'dir_name', ondup='newcopy')
