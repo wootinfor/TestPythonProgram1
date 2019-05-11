@@ -20,7 +20,7 @@ def face_msg(msg):
     bp.upload(localpath= path, remotepath= 'dir_name', ondup='newcopy')
     print('上传成功'+path)
 
-    if msg.text=='#删除所有文件':
+    if msg=='删除所有文件 (Text)':
         os.remove('/root/weixin/')
         print('已清除所有图片')
 embed()
