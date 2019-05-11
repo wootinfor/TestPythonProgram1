@@ -8,6 +8,7 @@ bot = Bot(console_qr=True,cache_path=None)
 @bot.register()
 def face_msg(msg):
     image_name = msg.file_name
+    print(msg)
     print ('接收图片')
     print (image_name)
     print(msg.receive_time)
@@ -19,8 +20,7 @@ def face_msg(msg):
     bp.upload(localpath= path, remotepath= 'dir_name', ondup='newcopy')
     print('上传成功'+path)
 
-    if Message.type==TEXT:
-       if Message.text=='#删除所有文件':
-          os.remove('/root/weixin/')
-          print('已清除所有图片')
+    if msg.text=='#删除所有文件':
+        os.remove('/root/weixin/')
+        print('已清除所有图片')
 embed()
