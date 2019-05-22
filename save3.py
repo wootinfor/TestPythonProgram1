@@ -1,0 +1,25 @@
+from wxpy import *
+from bypy import ByPy
+import os
+import time
+import datetime
+import threading
+bot = Bot(console_qr=True,cache_path=None)
+@bot.register()
+def face_msg(msg):
+    if msg.type==Text:
+        Folder_1=msg
+        print(msg)
+    else:
+        image_name = msg.file_name
+        print ('接收图片')
+        print (image_name)
+        print(msg.receive_time)
+        imagetime=str(msg.receive_time)
+        msg.get_file('/root/weixin/' + msg.file_name)
+        path='/root/weixin/' + msg.file_name
+    
+    bp=ByPy()
+    bp.upload(localpath= path, remotepath= 'dir_name/'+Folder_1, ondup='newcopy')
+    print('上传成功'+path)
+embed()
