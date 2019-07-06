@@ -32,5 +32,4 @@ def http_put():
 while True:
         time.sleep(5)
         resp = http_put()
-        print("OneNET请求结果:\n %s" %resp）
         time.sleep(5)
