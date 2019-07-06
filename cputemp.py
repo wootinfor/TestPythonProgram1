@@ -2,7 +2,6 @@ import urllib2
 import json
 import time
 import datetime
-
 APIKEY = 'oqSRzDP3XmZCxdShLtvEfxye54E'
 def get_temp():
         # 打开文件 
