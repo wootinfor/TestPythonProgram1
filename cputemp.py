@@ -1,4 +1,4 @@
-import urllib2
+import urllib.request
 import json
 import time
 import datetime
@@ -23,10 +23,10 @@ def http_put():
     jdata = json.dumps(values)                  # 对数据进行JSON格式化编码
     #打印json内容
     print (jdata)
-    request = urllib2.Request(url, jdata)
+    request = urllib.request.Request(url, jdata)
     request.add_header('api-key', APIKEY)
     request.get_method = lambda:'POST'          # 设置HTTP的访问方式
-    request = urllib2.urlopen(request)
+    request = urllib.request.urlopen(request)
     return request.read()
 
 while True:
