@@ -15,7 +15,7 @@ def get_temp():
 def http_put():
     temperature = get_temp() 
     CurTime = datetime.datetime.now()
-    url='http://api.heclouds.com/devices/533926029/datapoints'
+    url='http://api.heclouds.com/devices/533941417/datapoints'
     values={'datastreams':[{"id":"temp","datapoints":[{"at":CurTime.isoformat(),"value":temperature}]}]}
 
     print "当前的ISO时间为： %s" %CurTime.isoformat()
